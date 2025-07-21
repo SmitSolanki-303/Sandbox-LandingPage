@@ -15,6 +15,7 @@
 body {
     font-family: var(--font-urbanist);
     background-color: var(--color-bg);
+    scroll-behavior: smooth;
 }
 
 /* Breakpoints 
@@ -27,7 +28,7 @@ body {
 /* Base - apply style gloablly to all elements like <h1>, <p> */
 @layer base {
     h1 {
-        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-8 sm:leading-10 md:leading-12 lg:leading-14 xl:leading-16 font-bold text-secondary font-semibold;
+        @apply text-4xl lg:text-5xl xl:text-6xl leading-10 md:leading-12 lg:leading-14 xl:leading-16 font-bold text-secondary font-semibold;
     }
 
     h2 {
@@ -43,7 +44,7 @@ body {
     }
 
     p {
-        @apply text-sm xl:text-lg leading-4 sm:leading-5 md:leading-6 lg:leading-7 xl:leading-8 text-secondary font-medium;
+        @apply text-lg leading-5 md:leading-6 lg:leading-7 xl:leading-8 text-secondary font-medium;
     }
 
 }
@@ -55,11 +56,11 @@ body {
     }
 
     .btn {
-        @apply px-4 py-2 text-black text-sm xl:text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
+        @apply px-3 py-1 md:px-4 md:py-2 xl:px-6 xl:py-3  text-black text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
     }
 
     .primary-button {
-        @apply bg-primary text-white w-fit rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
+        @apply bg-primary text-white rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
     }
 }
 
