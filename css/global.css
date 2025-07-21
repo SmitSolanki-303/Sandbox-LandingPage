@@ -1,1 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
 @import "tailwindcss";
+
+
+/* Theme - apply style to specific classes */
+@theme {
+    --font-urbanist: 'Urbanist', sans-serif;
+    --color-primary: #5EB9F0;
+    --color-secondary: #343F52;
+    --color-accent: #60697B;
+    --color-white: #fff;
+    --color-bg: #FEFEFE;
+}
+
+body {
+    font-family: var(--font-urbanist);
+    background-color: var(--color-bg);
+}
+
+/* Breakpoints 
+    sm - min 640px
+    md - min 768px
+    lg - min 1024px
+    xl - min 1280px
+*/
+
+/* Base - apply style gloablly to all elements like <h1>, <p> */
+@layer base {
+    h1 {
+        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-8 sm:leading-10 md:leading-12 lg:leading-14 xl:leading-16 font-bold text-secondary font-semibold;
+    }
+
+    h2 {
+        @apply text-4xl font-bold text-secondary font-semibold;
+    }
+
+    h3 {
+        @apply text-3xl font-bold text-secondary font-semibold;
+    }
+
+    h4 {
+        @apply text-xl font-bold text-secondary font-semibold;
+    }
+
+    p {
+        @apply text-sm xl:text-lg leading-4 sm:leading-5 md:leading-6 lg:leading-7 xl:leading-8 text-secondary font-medium;
+    }
+
+}
+
+/* Components - apply style to specific elements and can be used as reusable components like card, button, etc */
+@layer components {
+    .container {
+        @apply max-w-7xl mx-auto px-4;
+    }
+
+    .btn {
+        @apply px-4 py-2 text-black text-sm xl:text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
+    }
+
+    .primary-button {
+        @apply bg-primary text-white w-fit rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
+    }
+}
+
+/* Utilities - apply style to specific classes like margin, padding, typography, colors, etc */
+@layer utilities {
+
+    /* Center element */
+    .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* For full width Header */
+    .flex-width {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

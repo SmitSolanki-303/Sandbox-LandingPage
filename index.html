@@ -1,17 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandbox</title>
     <!-- Tailwind CDN -->
     <link href="./css/output.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JavaScript -->
+    <script src="./javascript/script.js" defer></script>
+
 </head>
+
 <body>
     <header>
         <!-- container -->
-        <div class="max-w-[1320px] px-4 mx-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Wrapper -->
+            <div class="flex-width py-4">
+                <!-- Image wrapper -->
+                <div class="aspect-[134/27]">
+                    <img src="./assets/image/Sandbox-logo.png" class="w-full h-full object-cover" />
+                </div>
+
+                <div class="hidden md:flex lg:flex xl:flex place-items-center gap-6">
+                    <nav>
+                        <ul class="flex gap-6 ">
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#demos">Demos <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#pages">Pages <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#projects">Projects <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#blog">Blog <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#blocks">Blocks <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                            <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#documentation">Documentation <i class="fa-solid fa-angle-down text-primary"></i></a></li>
+                        </ul>
+                    </nav>
+
+                    <a class="btn primary-button">Contact</a>
+                </div>
+
+                <div class="block lg:hidden xl:hidden">
+                    <!-- Hamburger -->
+                    <div class="cursor-pointer" id="hamburgerMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5" />
+                        </svg>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="absolute top-0 left-0 w-40 h-screen bg-white flex md:flex lg:flex xl:flex flex-col place-items-center gap-4 transform -translate-x-full transition ease-in-out duration-300"
+                        id="sidebar">
+
+                        <div class="absolute top-4 right-2 cursor-pointer" id="closeMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+
+                        <nav class="mt-14">
+                            <ul class="flex flex-col gap-4">
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#demos">Demos </a></li>
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#pages">Pages </a></li>
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#projects">Projects </a></li>
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#blog">Blog </a></li>
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#blocks">Blocks </a></li>
+                                <li><a class="text-lg flex-center gap-1 font-semibold cursor-pointer" href="#documentation">Documentation</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <a class="btn primary-button">Contact</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen">
+            <!-- container -->
+            <div class="max-w-7xl mx-auto px-4">
+                <!-- Wrapper -->
+                <div class="flex flex-col mt-12 sm:mt-14 md:mt-16 lg:mt-18 xl:mt-20">
+                    <!-- Hero Text/Image Wrapper -->
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <!-- Hero Text Wrapper -->
+                        <div class="flex flex-col place-content-center gap-4 w-full xl:w-2/4">
+                            <h1>A digital agency specializing on <span class="text-primary">mobile
+                                    design</span></h1>
+                            <p>We are an award winning design agency that strongly believes in the
+                                power
+                                of creative ideas.</p>
+                            <a class="btn primary-button">Get Started</a>
+                        </div>
+
+                        <!-- Hero Image` -->
+                        <div class=" w-full sm:w-full xl:w-3/5 ">
+                            <div class="aspect-auto">
+                                <img src="./assets/image/hero-image.png" alt="Hero Image"
+                                    class="w-full h-full object-contain" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Marquee -->
+                    <p class="text-center mt-24">Trusted by over 2K+ clients across the world</p>
+
+                    <!-- Marquee Image -->
+                    <div class="w-full flex-width mt-12 overflow-hidden">
+                        <img src="./assets/image/icon1.png">
+                        <img src="./assets/image/icon2.png">
+                        <img src="./assets/image/icon3.png">
+                        <img src="./assets/image/icon4.png">
+                        <img src="./assets/image/icon5.png">
+                        <img src="./assets/image/icon6.png">
+                        <img src="./assets/image/icon7.png">
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
