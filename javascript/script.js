@@ -19,10 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },3000);
     
     // Duplicate
-    const cloneSlider = slider.cloneNode(true);
-    slider.appendChild(cloneSlider);
-    console.log(cloneSlider);
+    // const cloneSlider = slider.cloneNode(true);
+    // slider.appendChild(cloneSlider);
+    // console.log(cloneSlider);
 
+    // Clone the images and append into the slider
+    sliderImages.forEach((image) => {
+        const cloneImage = image.cloneNode(true);
+        slider.appendChild(cloneImage);
+    })
 
 
     // Event Listeners
