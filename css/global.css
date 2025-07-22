@@ -8,8 +8,10 @@
     --color-primary: #5EB9F0;
     --color-secondary: #343F52;
     --color-accent: #60697B;
+
+    --color-blue-light: #E5F4FD;
     --color-white: #fff;
-    --color-bg: #FEFEFE;
+    --color-offwhite: #FEFEFE;
 }
 
 body {
@@ -28,57 +30,45 @@ body {
 /* Base - apply style gloablly to all elements like <h1>, <p> */
 @layer base {
     h1 {
-        @apply text-4xl lg:text-5xl xl:text-6xl leading-10 md:leading-12 lg:leading-14 xl:leading-16 font-bold text-secondary font-semibold;
+        @apply text-4xl sm:text-5xl md:text-6xl leading-10 md:leading-12 lg:leading-14 xl:leading-16 text-secondary font-semibold;
     }
 
     h2 {
-        @apply text-4xl font-bold text-secondary font-semibold;
+        @apply text-2xl sm:text-3xl md:text-4xl text-secondary font-semibold;
     }
 
     h3 {
-        @apply text-3xl font-bold text-secondary font-semibold;
+        @apply text-lg sm:text-xl  text-secondary font-semibold;
     }
 
     h4 {
-        @apply text-xl font-bold text-secondary font-semibold;
+        @apply text-xl text-secondary font-semibold;
     }
 
     p {
-        @apply text-lg leading-5 md:leading-6 lg:leading-7 xl:leading-8 text-secondary font-medium;
+        @apply text-sm sm:text-base md:text-lg leading-4 sm:leading-5 md:leading-6 lg:leading-7 xl:leading-8 text-accent font-medium;
     }
 
 }
 
 /* Components - apply style to specific elements and can be used as reusable components like card, button, etc */
-@layer components {
+
+/* Utilities - apply style to specific classes like margin, padding, typography, colors, etc */
+@layer utilities {
     .container {
         @apply max-w-7xl mx-auto px-4;
     }
 
     .btn {
-        @apply px-3 py-1 md:px-4 md:py-2 xl:px-6 xl:py-3  text-black text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
+        @apply px-3 py-1 md:px-4 md:py-2 xl:px-6 xl:py-3 text-black text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
     }
 
     .primary-button {
         @apply bg-primary text-white rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
     }
-}
 
-/* Utilities - apply style to specific classes like margin, padding, typography, colors, etc */
-@layer utilities {
 
-    /* Center element */
-    .flex-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* For full width Header */
-    .flex-width {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .background-gradient {
+        background-image: linear-gradient(to bottom, #F0F8FE 0%, rgba(240, 248, 254, 0) 100%);
     }
 }
