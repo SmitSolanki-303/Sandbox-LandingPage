@@ -89,4 +89,8 @@ body {
     .transition-ease {
         @apply transition ease-in-out duration-500;
     }
+
+    .no-scrollbar {
+        @apply [scrollbar-width:none] [&::webkit-scrollbar]:hidden;
+    }
 }

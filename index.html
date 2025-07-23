@@ -14,7 +14,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JavaScript -->
-    <script src="./javascript/script.js" defer></script>
+    <script type="module" src="./javascript/script.js" defer></script>
 
 </head>
 
@@ -118,11 +118,12 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-screen py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16">
+        <section class="min-h-screen py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16 relative">
             <!-- container -->
             <div class="max-w-7xl mx-auto px-4">
                 <!-- Wrapper -->
-                <div class="flex flex-col place-items-center my-0 xl:my-12 overflow-x-hidden">
+                <div
+                    class="flex flex-col place-items-center overflow-x-hidden mb-14 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Hero Text/Image Wrapper -->
                     <div class="flex flex-col sm:flex-row gap-8">
                         <!-- Hero Text Wrapper -->
@@ -164,6 +165,13 @@
 
 
             </div>
+
+            <!-- Wave -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="absolute bottom-0">
+                <path fill="#F0F8FE" fill-opacity="1"
+                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
         </section>
 
 
@@ -171,15 +179,6 @@
 
 
         <!-- What we do Section -->
-        <!-- Wave -->
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
-                <path fill="#F0F8FE" fill-opacity="1"
-                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
-        </div>
-
         <section class="min-h-screen py-16 background-gradient-bottom">
             <!-- container -->
             <div class="max-w-7xl mx-auto px-4">
@@ -326,11 +325,11 @@
 
 
         <!-- Why Choose Us -->
-        <section class=" py-16 background-gradient-top">
+        <section class=" py-16 background-gradient-top relative">
             <!-- container -->
             <div class="max-w-7xl mx-auto px-4">
                 <!-- wrapper -->
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4  mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Left side -->
                     <div class="w-full sm:w-1/2">
                         <div class="aspect-auto">
@@ -412,7 +411,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Wave -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="absolute bottom-0">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
         </section>
+
 
 
         <!-- Company Facts Section -->
@@ -621,11 +628,12 @@
         </section>
 
         <!-- Project Section -->
-        <section class="min-h-screen py-16">
+        <section class="min-h-screen py-16 relative">
             <!-- container -->
             <div class="max-w-7xl mx-auto px-4">
                 <!-- wrapper -->
-                <div class="relative flex flex-col place-items-center gap-10">
+                <div
+                    class="relative flex flex-col place-items-center gap-10  mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <p class="text-center uppercase text-primary">Latest Projects</p>
                     <h2 class="text-center max-w-[800px] w-full">Check out some of our awesome projects with creative
                         ideas and great design.</h2>
@@ -633,44 +641,26 @@
                     <!-- Projects Slider -->
 
                     <!-- Slider Wrapper -->
-                    <div class="w-full grid grid-cols-2 gap-4 overflow-hidden">
-                        <!-- Single Card 1 -->
-                        <div class="flex flex-col">
-                            <!-- Image wrapper -->
-                            <div class="aspect-auto rounded-lg overflow-hidden">
-                                <img src="./assets/image/project-image-1.jpg" class="h-full w-full object-cover">
+                    <div class="overflow-hidden">
+                        <div class="flex overflow-x-auto py-8 gap-6 no-scrollbar" id="sliderWrapper">
+
+                            <!-- Single Card 1 -->
+                            <div class="flex-col" id="sliderCard">
+                                <div class="aspect-auto rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-full object-cover">
+                                </div>
+
+                                <h3 class="mt-4">Smit Solanki</h3>
+                                <p class="text-gray mt-2">Web Dev</p>
                             </div>
-
-                            <h3 class="mt-4">Cras Fermentum Sem</h3>
-                            <p class="text-gray mt-2">Mobile Design</p>
-                        </div>
-
-                        <!-- Single Card 2 -->
-                        <div class="flex flex-col">
-                            <!-- Image wrapper -->
-                            <div class="aspect-auto rounded-lg overflow-hidden">
-                                <img src="./assets/image/project-image-2.jpg" class="h-full w-full object-cover">
-                            </div>
-
-                            <h3 class="mt-4">Venenatis Euismod Vehicula</h3>
-                            <p class="text-gray mt-2">Web Design</p>
-                        </div>
-
-                        <!-- Single Card 3 -->
-                        <div class="flex flex-col ">
-                            <!-- Image wrapper -->
-                            <div class="aspect-auto rounded-lg overflow-hidden">
-                                <img src="./assets/image/project-image-3.jpg" class="h-full w-full object-cover">
-                            </div>
-
-                            <h3 class="mt-4">Tortor Tellus Cursus</h3>
-                            <p class="text-gray mt-2">Stationary</p>
+                            
                         </div>
                     </div>
 
                     <!-- Slider btn -->
                     <div class="flex place-items-center gap-4">
-                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer">
+                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer"
+                            id="prev">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -678,7 +668,8 @@
                             </svg>
                         </button>
 
-                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer">
+                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer"
+                            id="next">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -689,20 +680,18 @@
                     </div>
                 </div>
             </div>
-
+            <!-- Wave -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="absolute bottom-0">
+                <path fill="#F0F8FE" fill-opacity="1"
+                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg> -->
         </section>
 
 
         <!-- Testimonial Section -->
-        <!-- Wave -->
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
-                <path fill="#F0F8FE" fill-opacity="1"
-                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
-            </svg>
-        </div>
-        <section class="min-h-screen py-16 background-gradient-bottom">
+
+        <section class="min-h-screen py-16 background-gradient-bottom relative">
             <!-- container -->
             <div class="max-w-7xl mx-auto px-4">
                 <!-- wrapper -->
@@ -881,11 +870,11 @@
 
 
         <!-- FAQ Section -->
-        <section class="min-h-screen py-16 bg-offwhite overflow-hidden">
+        <section class="py-16 bg-offwhite overflow-hidden relative">
             <!-- conatiner -->
             <div class="max-w-7xl mx-auto px-4">
                 <!-- Wrapper -->
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Left side -->
                     <div class="w-full sm:w-1/2 flex flex-col place-items-start gap-4">
                         <p class="text-center uppercase text-primary">FAQ</p>
@@ -993,6 +982,15 @@
                     </div>
                 </div>
             </div>
+
+            <!-- FAQ bottom Wave -->
+            <svg width="100%" id="svg" viewBox="0 0 1440 250" xmlns="http://www.w3.org/2000/svg"
+                class="absolute bottom-0 left-0 right-0">
+                <path
+                    d="M 0,250 L 0,150 C 84.65071770334927,130 169.30143540669854,110 265,121 C 360.69856459330146,132 467.444976076555,174.00000000000003 568,176 C 668.555023923445,177.99999999999997 762.9186602870813,140 872,142 C 981.0813397129187,144 1104.8803827751196,186.00000000000003 1202,194 C 1299.1196172248804,201.99999999999997 1369.55980861244,176 1440,150 L 1440,400 L 0,400 Z"
+                    stroke="none" stroke-width="0" fill="#343f52" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+            </svg>
         </section>
 
 
