@@ -13,6 +13,12 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
     <!-- JavaScript -->
     <script type="module" src="./javascript/script.js" defer></script>
 
@@ -641,25 +647,114 @@
                     <!-- Projects Slider -->
 
                     <!-- Slider Wrapper -->
-                    <div class="overflow-hidden">
-                        <div class="flex overflow-x-auto py-8 gap-6 no-scrollbar" id="sliderWrapper">
+                    <!-- <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="sliderWrapper">
 
-                            <!-- Single Card 1 -->
-                            <div class="flex-col" id="sliderCard">
-                                <div class="aspect-auto rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-full object-cover">
+                            <div class="swiper-slide flex-col w-auto">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
                                 </div>
 
-                                <h3 class="mt-4">Smit Solanki</h3>
-                                <p class="text-gray mt-2">Web Dev</p>
+                                <h3 class="mt-4">Cras Fermentum Sem</h3>
+                                <p class="text-gray mt-2">Mobile Dev</p>
                             </div>
-                            
-                        </div>
-                    </div>
 
+                            <div class="swiper-slide flex-col w-auto">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-2.jpg" class="h-full w-auto object-cover">
+                                </div>
+
+                                <h3 class="mt-4">Venenatis Euismod Vehicula</h3>
+                                <p class="text-gray mt-2">Web Design</p>
+                            </div>
+
+                            <div class="swiper-slide flex-col w-auto">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-3.jpg" class="h-full w-auto object-cover">
+                                </div>
+
+                                <h3 class="mt-4">Tortor Tellus Cursus</h3>
+                                <p class="text-gray mt-2">Stationary</p>
+                            </div>
+
+                            <div class="swiper-slide flex-col w-auto">
+                                <div class=" rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
+                                </div>
+
+                                <h3 class="mt-4">lorem ipsum</h3>
+                                <p class="text-gray mt-2">Website Dev</p>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                    <div class="swiper mySwiper  w-full overflow-hidden p-6">
+                        <div class="swiper-wrapper ">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-1.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Cras Fermentum Sem</h3>
+                                <p class="text-gray-600 mt-2">Mobile Dev</p>
+                            </div>
+
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-2.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Venenatis Euismod Vehicula</h3>
+                                <p class="text-gray-600 mt-2">Web Design</p>
+                            </div>
+
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-3.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Tortor Tellus Cursus</h3>
+                                <p class="text-gray-600 mt-2">Stationary</p>
+                            </div>
+
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-1.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Diseño Creativo Urbano</h3>
+                                <p class="text-gray-600 mt-2">UI/UX Design</p>
+                            </div>
+
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-2.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Innovación Digital Moderna</h3>
+                                <p class="text-gray-600 mt-2">Print Design</p>
+                            </div>
+
+                            <div class="swiper-slide flex flex-col">
+                                <div class="rounded-lg overflow-hidden">
+                                    <img src="./assets/image/project-image-3.jpg"
+                                        class="h-full w-auto object-cover">
+                                </div>
+                                <h3 class="mt-4 text-lg font-semibold">Estética Visual Clara</h3>
+                                <p class="text-gray-600 mt-2">Web Redesign</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                     <!-- Slider btn -->
                     <div class="flex place-items-center gap-4">
-                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer"
+                        <button
+                            class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer prev-btn"
                             id="prev">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
@@ -668,16 +763,18 @@
                             </svg>
                         </button>
 
-                        <button class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer"
+                        <button
+                            class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer next-btn"
                             id="next">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                             </svg>
-
                         </button>
+
                     </div>
+
                 </div>
             </div>
             <!-- Wave -->
