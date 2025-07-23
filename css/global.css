@@ -22,6 +22,14 @@
     --background-gradient-bottom: linear-gradient(to bottom, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
     --background-gradient-top: linear-gradient(to top, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
 
+    --animate-infinite-scroll: infinite-scroll 50s linear infinite;
+
+    @keyframes infinite-scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+    
+
 }
 
 body {
@@ -40,7 +48,7 @@ body {
 /* Base - apply style gloablly to all elements like <h1>, <p> */
 @layer base {
     h1 {
-        @apply text-4xl sm:text-5xl md:text-6xl leading-10 md:leading-12 lg:leading-14 xl:leading-16 text-secondary font-semibold;
+        @apply text-4xl sm:text-5xl md:text-6xl leading-tight md:leading-tight lg:leading-tight xl:leading-tight text-secondary font-semibold;
     }
 
     h2 {
@@ -90,5 +98,8 @@ body {
         @apply transition ease-in-out duration-500;
     }
 
+    .swipe {
+        @apply w-full overflow-hidden p-6;
+    }
    
 }

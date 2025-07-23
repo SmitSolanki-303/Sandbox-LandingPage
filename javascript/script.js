@@ -1,17 +1,9 @@
 // import Swiper from "swiper/bundle";
 // import "swiper/css/bundle";  // css, navigation, pagination
-import projectData from "./projectData.js";
-import logoSlider from "./logoSlider.js";
 import accordion from "./accordion.js";
 import toggleMenu from "./toggleManu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Selectors
-  console.log(projectData);
-
-  // Logo Slider / MarqueeWellcome@123
-
-  logoSlider();
 
   // Accordion
   accordion();
@@ -26,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     effect: "slide",
     navigation: {
-      nextEl: ".next-btn",
-      prevEl: ".prev-btn",
+      nextEl: "#next",
+      prevEl: "#prev",
     },
     breakpoints: {
       640: {
@@ -38,8 +30,21 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 3,
         spaceBetween: 40,
       },
-    }
+    },
+    // Autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
   });
 
-  
+  // const prevBtn = document.getElementById("prev");
+  // const nextBtn = document.getElementById("next");
+
+  // prevBtn.addEventListener("click", () => {
+  //   swiper.slidePrev();
+  // });
+
+  // nextBtn.addEventListener("click", () => {
+  //   swiper.slideNext();
+  // });
 });

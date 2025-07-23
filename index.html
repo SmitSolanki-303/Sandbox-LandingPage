@@ -151,20 +151,29 @@
                         </div>
                     </div>
 
-
-                    <!-- Marquee -->
                     <p class="text-center mt-24">Trusted by over 2K+ clients across the world</p>
 
                     <!-- Marquee Image - Slider -->
-                    <div class="flex place-items-center justify-between w-full mt-12 flex-row gap-10 transition-transform ease-out duration-300 translate-x-0 scroll-smooth"
-                        id="slider">
-                        <img src="./assets/image/icon1.png" class="w-full">
-                        <img src="./assets/image/icon2.png" class="w-full">
-                        <img src="./assets/image/icon3.png" class="w-full">
-                        <img src="./assets/image/icon4.png" class="w-full">
-                        <img src="./assets/image/icon5.png" class="w-full">
-                        <img src="./assets/image/icon6.png" class="w-full">
-                        <img src="./assets/image/icon7.png" class="w-full">
+                    <div class="w-full mt-12 inline-flex gap-10 overflow-hidden group" id="slider">
+                        <ul class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll transition-all 500 list-none">
+                            <li><img src="./assets/image/icon1.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon2.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon3.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon4.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon5.png" class="max-w-none"></li>
+                            <li> <img src="./assets/image/icon6.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon7.png" class="max-w-none"></li>
+                        </ul>
+
+                        <ul class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll list-none" aria-hidden="true">
+                            <li><img src="./assets/image/icon1.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon2.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon3.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon4.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon5.png" class="max-w-none"></li>
+                            <li> <img src="./assets/image/icon6.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon7.png" class="max-w-none"></li>
+                        </ul>
                     </div>
 
                 </div>
@@ -173,10 +182,12 @@
             </div>
 
             <!-- Wave -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" class="absolute bottom-0">
-                <path fill="#F0F8FE" fill-opacity="1"
-                    d="M0,192L48,176C96,160,192,128,288,149.3C384,171,480,245,576,245.3C672,245,768,171,864,138.7C960,107,1056,117,1152,133.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-                </path>
+            <svg width="100%" id="svg" viewBox="0 100 1440 150" xmlns="http://www.w3.org/2000/svg"
+                class="absolute bottom-0 left-0 right-0">
+                <path
+                    d="M 0,150 L 0,150 C 84.65071770334927,130 169.30143540669854,110 265,121 C 360.69856459330146,132 467.444976076555,174.00000000000003 568,176 C 668.555023923445,177.99999999999997 762.9186602870813,140 872,142 C 981.0813397129187,144 1104.8803827751196,186.00000000000003 1202,194 C 1299.1196172248804,201.99999999999997 1369.55980861244,176 1440,150 L 1440,400 L 0,400 Z"
+                    stroke="none" stroke-width="0" fill="#F0F8FE" fill-opacity="1"
+                    class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
             </svg>
         </section>
 
@@ -690,12 +701,11 @@
                     </div> -->
 
                     <div class="swiper mySwiper  w-full overflow-hidden p-6">
-                        <div class="swiper-wrapper ">
+                        <div class="swiper-wrapper">
                             <!-- Slide 1 -->
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-1.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Cras Fermentum Sem</h3>
                                 <p class="text-gray-600 mt-2">Mobile Dev</p>
@@ -703,8 +713,7 @@
 
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-2.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-2.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Venenatis Euismod Vehicula</h3>
                                 <p class="text-gray-600 mt-2">Web Design</p>
@@ -712,8 +721,7 @@
 
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-3.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-3.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Tortor Tellus Cursus</h3>
                                 <p class="text-gray-600 mt-2">Stationary</p>
@@ -721,8 +729,7 @@
 
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-1.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Diseño Creativo Urbano</h3>
                                 <p class="text-gray-600 mt-2">UI/UX Design</p>
@@ -730,8 +737,7 @@
 
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-2.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-2.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Innovación Digital Moderna</h3>
                                 <p class="text-gray-600 mt-2">Print Design</p>
@@ -739,8 +745,7 @@
 
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-3.jpg"
-                                        class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-3.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Estética Visual Clara</h3>
                                 <p class="text-gray-600 mt-2">Web Redesign</p>
@@ -989,6 +994,7 @@
                         <div class="flex flex-col gap-4" id="accordionWrapper">
                             <!-- Accordion 1 -->
                             <div class="flex flex-col rounded-xl shadow-background p-5 bg-white" id="accordion">
+
                                 <div class="cursor-pointer  transition-ease" id="accordionHead">
                                     <h3 class="hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -1081,10 +1087,10 @@
             </div>
 
             <!-- FAQ bottom Wave -->
-            <svg width="100%" id="svg" viewBox="0 0 1440 250" xmlns="http://www.w3.org/2000/svg"
+            <svg width="100%" id="svg" viewBox="0 100 1440 150" xmlns="http://www.w3.org/2000/svg"
                 class="absolute bottom-0 left-0 right-0">
                 <path
-                    d="M 0,250 L 0,150 C 84.65071770334927,130 169.30143540669854,110 265,121 C 360.69856459330146,132 467.444976076555,174.00000000000003 568,176 C 668.555023923445,177.99999999999997 762.9186602870813,140 872,142 C 981.0813397129187,144 1104.8803827751196,186.00000000000003 1202,194 C 1299.1196172248804,201.99999999999997 1369.55980861244,176 1440,150 L 1440,400 L 0,400 Z"
+                    d="M 0,150 L 0,150 C 84.65071770334927,130 169.30143540669854,110 265,121 C 360.69856459330146,132 467.444976076555,174.00000000000003 568,176 C 668.555023923445,177.99999999999997 762.9186602870813,140 872,142 C 981.0813397129187,144 1104.8803827751196,186.00000000000003 1202,194 C 1299.1196172248804,201.99999999999997 1369.55980861244,176 1440,150 L 1440,400 L 0,400 Z"
                     stroke="none" stroke-width="0" fill="#343f52" fill-opacity="1"
                     class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
             </svg>

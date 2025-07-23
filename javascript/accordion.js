@@ -5,6 +5,7 @@
     accordions.forEach((accordion) => {
       const accordionHead = accordion.querySelector("#accordionHead");
       const accordionBody = accordion.querySelector("#accordionBody");
+      const icon = accordion.querySelector("#icon");
 
       accordionHead.addEventListener("click", () => {
         // isVisible = ! (true) - our accordion contain the "h-0"
@@ -21,6 +22,7 @@
         // opening the accordion by removing the "h-0"
         if (!isVisible) {
           accordionBody.classList.remove("h-0");
+          icon.classList.add("rotate-180");
         }
       });
     });
