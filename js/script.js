@@ -1,15 +1,19 @@
 // import Swiper from "swiper/bundle";
-// import "swiper/css/bundle";  // css, navigation, pagination
+// import { Navigation,Pagination } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+
 import accordion from "./accordion.js";
 import toggleMenu from "./toggleManu.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-
   // Accordion
   accordion();
 
   // Menu
   toggleMenu();
+  
 
   // Initialize Swiper
   new Swiper(".mySwiper", {
@@ -27,24 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 20,
       },
       768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
         slidesPerView: 3,
         spaceBetween: 40,
       },
     },
-    // Autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 
-  // const prevBtn = document.getElementById("prev");
-  // const nextBtn = document.getElementById("next");
-
-  // prevBtn.addEventListener("click", () => {
-  //   swiper.slidePrev();
-  // });
-
-  // nextBtn.addEventListener("click", () => {
-  //   swiper.slideNext();
-  // });
 });

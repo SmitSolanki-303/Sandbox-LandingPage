@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandbox</title>
     <!-- Tailwind CDN -->
-    <link href="./css/output.css" rel="stylesheet">
+    <link href="./build/output.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -20,22 +20,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- JavaScript -->
-    <script type="module" src="./javascript/script.js" defer></script>
+    <script type="module" src="./js/script.js" defer></script>
 
 </head>
 
 <body>
-    <header>
+    <header class="sticky top-0 shadow-background z-10 bg-white-100">
         <!-- container -->
-        <div class="container">
+        <div class="container mx-auto px-4">
             <!-- Wrapper -->
             <div class="flex place-items-center justify-between w-full py-4">
                 <!-- Image wrapper -->
-                <div class="aspect-[134/27]">
+                <div class="h-full w-auto">
                     <a href="#"><img src="./assets/image/Sandbox-logo.png" class="w-full h-full object-cover" /></a>
                 </div>
 
-                <div class="hidden sm:hidden md:hidden lg:flex xl:flex place-items-center gap-6">
+                <div class="hidden lg:flex xl:flex place-items-center gap-6">
                     <nav>
                         <ul class="flex gap-6 ">
                             <li><a class="text-lg flex place-items-center justify-center gap-1 font-semibold cursor-pointer hover:text-primary transition-all"
@@ -75,7 +75,7 @@
                     </div>
 
                     <!-- Sidebar -->
-                    <div class="absolute top-0 left-0 w-40 h-screen bg-white flex md:flex lg:flex xl:flex flex-col place-items-center gap-4 transform -translate-x-full transition ease-in-out duration-300 z-6"
+                    <div class="absolute top-0 left-0 w-80 h-screen bg-white-100 flex flex-col place-items-center gap-4 transform -translate-x-full transition ease-in-out duration-300 z-6"
                         id="sidebar">
 
                         <div class="absolute top-4 right-2 cursor-pointer" id="closeMenu">
@@ -124,17 +124,20 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="min-h-screen py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16 relative">
+        <section class="flex items-center min-h-screen py-6 md:py-8 lg:py-12 xl:py-16 ">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto px-4">
                 <!-- Wrapper -->
                 <div
                     class="flex flex-col place-items-center overflow-x-hidden mb-14 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Hero Text/Image Wrapper -->
-                    <div class="flex flex-col sm:flex-row gap-8">
+                    <div class="flex flex-col sm:flex-row gap-4">
+
                         <!-- Hero Text Wrapper -->
-                        <div class="flex flex-col place-content-center gap-4 w-full xl:w-2/4">
-                            <h1>A digital agency specializing on <span class="text-primary">mobile
+                        <div class="flex flex-col place-content-center gap-4 max-w-[460px] w-full sm:w-2/5">
+                            <h1
+                                class="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight md:leading-tight lg:leading-tight xl:leading-tight ">
+                                A digital agency specializing on <span class="text-primary">mobile
                                     design</span></h1>
                             <p>We are an award winning design agency that strongly believes in the
                                 power
@@ -143,19 +146,31 @@
                         </div>
 
                         <!-- Hero Image` -->
-                        <div class=" w-full xl:w-3/5 ">
-                            <div class="aspect-auto">
+                        <div class=" w-full sm:w-3/5 h-full">
+                            <div class="aspect-auto ">
                                 <img src="./assets/image/hero-image.png" alt="Hero Image"
                                     class="w-full h-full object-contain" />
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <p class="text-center mt-24">Trusted by over 2K+ clients across the world</p>
+
+        <!-- Marquee Section -->
+        <section class=" py-4 sm:py-6 md:py-8 lg:py-12 xl:py-16 relative">
+            <!-- container -->
+            <div class="container mx-auto px-4">
+                <!-- Wrapper -->
+                <div
+                    class="flex flex-col place-items-center overflow-x-hidden mb-14 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
+                    <p class="text-center">Trusted by over 2K+ clients across the world</p>
 
                     <!-- Marquee Image - Slider -->
                     <div class="w-full mt-12 inline-flex gap-10 overflow-hidden group" id="slider">
-                        <ul class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll transition-all 500 list-none">
+                        <ul
+                            class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll transition-all list-none">
                             <li><img src="./assets/image/icon1.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon2.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon3.png" class="max-w-none"></li>
@@ -165,13 +180,14 @@
                             <li><img src="./assets/image/icon7.png" class="max-w-none"></li>
                         </ul>
 
-                        <ul class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll list-none" aria-hidden="true">
+                        <ul
+                            class="flex flex-row gap-10 place-items-center justify-between animate-infinite-scroll transition-all list-none">
                             <li><img src="./assets/image/icon1.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon2.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon3.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon4.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon5.png" class="max-w-none"></li>
-                            <li> <img src="./assets/image/icon6.png" class="max-w-none"></li>
+                            <li><img src="./assets/image/icon6.png" class="max-w-none"></li>
                             <li><img src="./assets/image/icon7.png" class="max-w-none"></li>
                         </ul>
                     </div>
@@ -192,17 +208,15 @@
         </section>
 
 
-
-
-
         <!-- What we do Section -->
-        <section class="min-h-screen py-16 background-gradient-bottom">
+        <section class="min-h-screen py-16 bg-gradient-bottom">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto  px-4">
                 <!-- Wrapper -->
                 <div class="flex flex-col place-items-center my-12 gap-4">
                     <p class="text-center uppercase text-primary">What We Do?</p>
-                    <h2 class="text-center max-w-[600px] w-full">The service we offer is specifically designed to meet
+                    <h2 class="text-center max-w-[600px] w-full text-2xl sm:text-3xl md:text-4xl">The service we offer
+                        is specifically designed to meet
                         your needs.</h2>
 
                     <!-- Cards Wrapper -->
@@ -215,7 +229,7 @@
                                 <img src="./assets/image/Web-Design-image.png" class="w-full h-full object-contain">
                             </div>
 
-                            <h3>Web Design</h3>
+                            <h3 class="text-lg sm:text-xl md:text-2xl text-secondary font-semibold">Web Design</h3>
                             <p class="text-center">Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta
                                 gravida at eget. Fusce dapibus tellus.</p>
                             <a class="text-primary mt-auto mb-0 text-shadow-xs inline-flex place-items-center gap-1 hover:text-black"
@@ -233,7 +247,7 @@
                                 <img src="./assets/image/Graphic-Design-image.png" class="w-full h-full object-contain">
                             </div>
 
-                            <h3>Graphic Design</h3>
+                            <h3 class="text-lg sm:text-xl md:text-2xl text-secondary font-semibold">Graphic Design</h3>
                             <p class="text-center">Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue
                                 laoreet. Sed posuere consectetur.</p>
                             <a class="text-primary mt-auto mb-0 text-shadow-xs inline-flex place-items-center gap-1 hover:text-black"
@@ -251,7 +265,7 @@
                                 <img src="./assets/image/3D-Animation-image.png" class="w-full h-full object-contain">
                             </div>
 
-                            <h3>3D Animation</h3>
+                            <h3 class="text-lg sm:text-xl md:text-2xl text-secondary font-semibold">3D Animation</h3>
                             <p class="text-center text-shadow-black">Cras justo odio, dapibus ac facilisis in, egestas
                                 eget quam. Praesent commodo cursus magna scelerisque.</p>
                             <a class="text-primary mt-auto mb-0 text-shadow-xs inline-flex place-items-center gap-1 hover:text-black"
@@ -268,16 +282,18 @@
             </div>
         </section>
 
+
         <!-- Our Startegy Section -->
-        <section class="py-16 bg-offwhite overflow-hidden">
+        <section class="py-16 bg-white-100 overflow-hidden">
             <!-- conatiner -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto px-4">
                 <!-- Wrapper -->
                 <div class="flex flex-col sm:flex-row gap-4">
                     <!-- Left side -->
                     <div class="w-full sm:w-2/5 flex flex-col place-items-start gap-4">
                         <p class="text-center uppercase text-primary">Our Strategy</p>
-                        <h2>Here are 3 working steps to organize our projects.</h2>
+                        <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold">Here are 3
+                            working steps to organize our projects.</h2>
                         <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta
                             sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
                             Nullam quis risus eget urna mollis.</p>
@@ -289,49 +305,49 @@
                     </div>
 
                     <!-- Right side -->
-                    <div class="w-full sm:w-3/5 flex flex-col place-items-center gap-6">
+                    <div class="w-full sm:w-3/5 flex flex-col items-center justify-center gap-6">
                         <!-- card -->
                         <div
-                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 transform translate-0">
+                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl p-4 md:p-6 transform translate-0">
                             <div
-                                class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                                class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                                 <span>01</span>
 
                             </div>
 
                             <div class="flex flex-col place-items-start">
-                                <h3>Collect Ideas</h3>
+                                <h3 class="text-lg sm:text-xl text-secondary font-semibold">Collect Ideas</h3>
                                 <p>Nulla vitae elit libero pharetra augue dapibus</p>
                             </div>
                         </div>
 
                         <!-- card -->
                         <div
-                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl  px-4 py-4 md:px-6 md:py-6 transform translate-0 lg:translate-x-20">
+                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl  p-4 md:p-6 transform translate-0 lg:translate-x-20">
                             <div
-                                class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                                class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                                 <span>02</span>
 
                             </div>
 
                             <div class="flex flex-col place-items-start">
-                                <h3>Data Analysis</h3>
+                                <h3 class="text-lg sm:text-xl text-secondary font-semibold">Data Analysis</h3>
                                 <p>Vivamus sagittis lacus vel augue laoreet.</p>
                             </div>
                         </div>
 
                         <!-- card -->
                         <div
-                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl  px-4 py-4 md:px-6 md:py-6 transform translate-0 lg:translate-x-10">
+                            class="flex flex-row place-items-center gap-4 max-w-lg w-full bg-white drop-shadow-xl  p-4 md:p-6 transform translate-0 lg:translate-x-10">
 
                             <div
-                                class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center shrink-0">
+                                class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center shrink-0">
                                 <span>03</span>
                             </div>
 
 
                             <div class="flex flex-col place-items-start">
-                                <h3>Finalize Product</h3>
+                                <h3 class="text-lg sm:text-xl text-secondary font-semibold">Finalize Product</h3>
                                 <p>Cras mattis consectetur purus sit amet.</p>
                             </div>
                         </div>
@@ -342,9 +358,9 @@
 
 
         <!-- Why Choose Us -->
-        <section class=" py-16 background-gradient-top relative">
+        <section class=" py-16 bg-gradient-top relative">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto  px-4">
                 <!-- wrapper -->
                 <div class="flex flex-col sm:flex-row gap-4  mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Left side -->
@@ -358,12 +374,14 @@
                     <!-- Right side -->
                     <div class="w-full sm:w-1/2 flex flex-col place-items-start gap-4">
                         <p class="text-center uppercase text-primary">Why Choose Us</p>
-                        <h2>We bring solutions to make life easier..</h2>
+                        <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold">We bring
+                            solutions to make life easier..</h2>
                         <div class="flex flex-col gap-4" id="accordionWrapper">
 
                             <div class="flex flex-col" id="accordion">
                                 <div class="cursor-pointer  transition-ease" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -384,7 +402,8 @@
 
                             <div class="flex flex-col" id="accordion">
                                 <div class="cursor-pointer" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -405,7 +424,8 @@
 
                             <div class="flex flex-col" id="accordion">
                                 <div class="cursor-pointer" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -440,9 +460,9 @@
 
 
         <!-- Company Facts Section -->
-        <section class="min-h-screen py-16 bg-offwhite">
+        <section class="min-h-screen py-16 bg-white-100">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto px-4">
                 <!-- wrapper -->
                 <div class="flex flex-col gap-10">
                     <!-- Text top -->
@@ -450,7 +470,8 @@
 
                         <div class="w-full sm:w-2/5 flex flex-col place-items-start gap-4">
                             <p class="text-center uppercase text-primary">Company Facts</p>
-                            <h2>We are proud of our design team.</h2>
+                            <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold">We are
+                                proud of our design team.</h2>
                             <p>Just sit back and relax while we take care of your business needs for you.</p>
                         </div>
 
@@ -459,7 +480,7 @@
                             <!-- Project Number card -->
                             <div class="flex flex-col place-items-center gap-2 px-5">
                                 <div
-                                    class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center">
+                                    class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -469,7 +490,7 @@
                                     </span>
                                 </div>
 
-                                <h3 class="text-xl md:text-2xl xl:text-3xl font-bold">1000+</h3>
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold">1000+</h3>
                                 <p class="text-center">Completed Projects</p>
                             </div>
 
@@ -477,7 +498,7 @@
                             <!-- Project Number card -->
                             <div class="flex flex-col place-items-center gap-2 px-5">
                                 <div
-                                    class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center">
+                                    class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -494,7 +515,7 @@
                             <!-- Project Number card -->
                             <div class="flex flex-col place-items-center gap-2 px-5">
                                 <div
-                                    class="text-primary bg-blue-light border-2 border-blue-light w-12 h-12 rounded-full flex items-center justify-center">
+                                    class="text-primary bg-blue-100 border-2 border-blue-100 w-12 h-12 rounded-full flex items-center justify-center">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -516,16 +537,16 @@
                     <!-- info Card bottom -->
                     <!-- Card Wrapper   grid-cols-[repeat(auto-fit,minmax(250px,1fr))] -->
                     <div
-                        class="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] justify-evenly gap-4 mx-auto sm:mx-0">
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between w-full items-center gap-4 mx-auto ">
                         <!-- Single Card -->
                         <div
-                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background">
+                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background mx-auto">
                             <!-- user avatar wrapper -->
                             <div class="aspect-square rounded-full overflow-hidden">
                                 <img src="./assets/image/user1.jpg" class="h-full w-full object-cover">
                             </div>
-                            <h4>Coriss Ambady</h4>
-                            <p class="text-gray">Financial Analyst</p>
+                            <h4 class="text-xl text-secondary font-semibold">Coriss Ambady</h4>
+                            <p class="text-gray-400">Financial Analyst</p>
                             <p>Fermentum massa justo sit amet risus morbi leo.</p>
                             <!-- Social Icons -->
                             <div class="flex place-items-center gap-4 mt-auto mb-0">
@@ -549,13 +570,13 @@
 
                         <!-- Single Card -->
                         <div
-                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background">
+                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background mx-auto">
                             <!-- user avatar wrapper -->
                             <div class="aspect-square rounded-full overflow-hidden">
                                 <img src="./assets/image/user2.jpg" class="h-full w-full object-cover">
                             </div>
-                            <h4>Cory Zamora</h4>
-                            <p class="text-gray">Marketing Specialist</p>
+                            <h4 class="text-xl text-secondary font-semibold">Cory Zamora</h4>
+                            <p class="text-gray-400">Marketing Specialist</p>
                             <p>Fermentum massa justo sit amet risus morbi leo.</p>
                             <!-- Social Icons -->
                             <div class="flex place-items-center gap-4 mt-auto mb-0">
@@ -580,13 +601,13 @@
 
                         <!-- Single Card -->
                         <div
-                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background">
+                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background mx-auto">
                             <!-- user avatar wrapper -->
                             <div class="aspect-square rounded-full overflow-hidden">
                                 <img src="./assets/image/user3.jpg" class="h-full w-full object-cover">
                             </div>
-                            <h4>Nikolas Brooten</h4>
-                            <p class="text-gray">Sales Manager</p>
+                            <h4 class="text-xl text-secondary font-semibold">Nikolas Brooten</h4>
+                            <p class="text-gray-400">Sales Manager</p>
                             <p>Fermentum massa justo sit amet risus morbi leo.</p>
                             <!-- Social Icons -->
                             <div class="flex place-items-center gap-4 mt-auto mb-0">
@@ -610,13 +631,13 @@
 
                         <!-- Single Card -->
                         <div
-                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background">
+                            class="flex flex-col place-items-start justify-between gap-6 max-w-[300px] p-8 rounded-2xl shadow-background mx-auto">
                             <!-- user avatar wrapper -->
                             <div class="aspect-square rounded-full overflow-hidden">
                                 <img src="./assets/image/user4.jpg" class="h-full w-full object-cover">
                             </div>
-                            <h4>Jackie Sanders</h4>
-                            <p class="text-gray">Investment Planner</p>
+                            <h4 class="text-xl text-secondary font-semibold">Jackie Sanders</h4>
+                            <p class="text-gray-400">Investment Planner</p>
                             <p>Fermentum massa justo sit amet risus morbi leo.</p>
                             <!-- Social Icons -->
                             <div class="flex place-items-center gap-4 mt-auto mb-0">
@@ -647,12 +668,13 @@
         <!-- Project Section -->
         <section class="min-h-screen py-16 relative">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto  px-4">
                 <!-- wrapper -->
                 <div
                     class="relative flex flex-col place-items-center gap-10  mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <p class="text-center uppercase text-primary">Latest Projects</p>
-                    <h2 class="text-center max-w-[800px] w-full">Check out some of our awesome projects with creative
+                    <h2 class="text-center max-w-[800px] w-full text-2xl sm:text-3xl md:text-4xl">Check out some of our
+                        awesome projects with creative
                         ideas and great design.</h2>
 
                     <!-- Projects Slider -->
@@ -667,7 +689,7 @@
                                 </div>
 
                                 <h3 class="mt-4">Cras Fermentum Sem</h3>
-                                <p class="text-gray mt-2">Mobile Dev</p>
+                                <p class="text-gray-400 mt-2">Mobile Dev</p>
                             </div>
 
                             <div class="swiper-slide flex-col w-auto">
@@ -676,7 +698,7 @@
                                 </div>
 
                                 <h3 class="mt-4">Venenatis Euismod Vehicula</h3>
-                                <p class="text-gray mt-2">Web Design</p>
+                                <p class="text-gray-400 mt-2">Web Design</p>
                             </div>
 
                             <div class="swiper-slide flex-col w-auto">
@@ -685,7 +707,7 @@
                                 </div>
 
                                 <h3 class="mt-4">Tortor Tellus Cursus</h3>
-                                <p class="text-gray mt-2">Stationary</p>
+                                <p class="text-gray-400 mt-2">Stationary</p>
                             </div>
 
                             <div class="swiper-slide flex-col w-auto">
@@ -694,21 +716,21 @@
                                 </div>
 
                                 <h3 class="mt-4">lorem ipsum</h3>
-                                <p class="text-gray mt-2">Website Dev</p>
+                                <p class="text-gray-400 mt-2">Website Dev</p>
                             </div>
 
                         </div>
                     </div> -->
 
-                    <div class="swiper mySwiper  w-full overflow-hidden p-6">
-                        <div class="swiper-wrapper">
+                    <div class="swiper mySwiper w-full overflow-hidden p-6">
+                        <div class="swiper-wrapper cursor-grab">
                             <!-- Slide 1 -->
                             <div class="swiper-slide flex flex-col">
                                 <div class="rounded-lg overflow-hidden">
-                                    <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
+                                    <img src="./assets/image/project-image-1.jpg" class=" h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Cras Fermentum Sem</h3>
-                                <p class="text-gray-600 mt-2">Mobile Dev</p>
+                                <p class="text-gray-400-600 mt-2">Mobile Dev</p>
                             </div>
 
                             <div class="swiper-slide flex flex-col">
@@ -716,7 +738,7 @@
                                     <img src="./assets/image/project-image-2.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Venenatis Euismod Vehicula</h3>
-                                <p class="text-gray-600 mt-2">Web Design</p>
+                                <p class="text-gray-400-600 mt-2">Web Design</p>
                             </div>
 
                             <div class="swiper-slide flex flex-col">
@@ -724,7 +746,7 @@
                                     <img src="./assets/image/project-image-3.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Tortor Tellus Cursus</h3>
-                                <p class="text-gray-600 mt-2">Stationary</p>
+                                <p class="text-gray-400-600 mt-2">Stationary</p>
                             </div>
 
                             <div class="swiper-slide flex flex-col">
@@ -732,7 +754,7 @@
                                     <img src="./assets/image/project-image-1.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Diseño Creativo Urbano</h3>
-                                <p class="text-gray-600 mt-2">UI/UX Design</p>
+                                <p class="text-gray-400-600 mt-2">UI/UX Design</p>
                             </div>
 
                             <div class="swiper-slide flex flex-col">
@@ -740,7 +762,7 @@
                                     <img src="./assets/image/project-image-2.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Innovación Digital Moderna</h3>
-                                <p class="text-gray-600 mt-2">Print Design</p>
+                                <p class="text-gray-400-600 mt-2">Print Design</p>
                             </div>
 
                             <div class="swiper-slide flex flex-col">
@@ -748,36 +770,41 @@
                                     <img src="./assets/image/project-image-3.jpg" class="h-full w-auto object-cover">
                                 </div>
                                 <h3 class="mt-4 text-lg font-semibold">Estética Visual Clara</h3>
-                                <p class="text-gray-600 mt-2">Web Redesign</p>
+                                <p class="text-gray-400-600 mt-2">Web Redesign</p>
                             </div>
 
                         </div>
 
-                        <!-- Pagination -->
-                        <div class="swiper-pagination"></div>
                     </div>
-                    <!-- Slider btn -->
-                    <div class="flex place-items-center gap-4">
-                        <button
-                            class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer prev-btn"
-                            id="prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                            </svg>
-                        </button>
 
-                        <button
-                            class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white cursor-pointer next-btn"
-                            id="next">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </button>
+                    <div class="flex flex-col items-center gap-1 mt-14">
 
+                        <!-- Pagination -->
+                        <div class="swiper-pagination mb-14"></div>
+
+                        <!-- Slider btn -->
+                        <div class="flex place-items-center gap-4">
+                            <button
+                                class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white-100 cursor-pointer prev-btn"
+                                id="prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                                </svg>
+                            </button>
+
+                            <button
+                                class="bg-primary/70 hover:bg-primary p-4 rounded-full text-white-100 cursor-pointer next-btn"
+                                id="next">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                </svg>
+                            </button>
+
+                        </div>
                     </div>
 
                 </div>
@@ -793,13 +820,14 @@
 
         <!-- Testimonial Section -->
 
-        <section class="min-h-screen py-16 background-gradient-bottom relative">
+        <section class="min-h-screen py-16 bg-gradient-bottom relative">
             <!-- container -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto  px-4">
                 <!-- wrapper -->
                 <div class="relative flex flex-col place-items-center gap-10">
                     <p class="text-center uppercase text-primary">Latest Projects</p>
-                    <h2 class="text-center max-w-[800px] w-full">Don't take our word for it. See what customers are
+                    <h2 class="text-center max-w-[800px] w-full text-2xl sm:text-3xl md:text-4xl">Don't take our word
+                        for it. See what customers are
                         saying about us.</h2>
 
                     <!-- Testimonial Wrapper -->
@@ -808,49 +836,58 @@
                         <div class="grid gap-8">
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                        auctor.
+                                        Vestibulum id
+                                        ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis
+                                        natoque
+                                        penatibus.”</p>
                                 </div>
-                                <p class="mt-4">“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-                                    Vestibulum id
-                                    ligula porta felis euismod semper. Cras justo odio dapibus facilisis sociis natoque
-                                    penatibus.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user1.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Coriss Ambady</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Coriss Ambady</h3>
                                         <p>Financial Analyst</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Curabitur blandit tempus porttitor.
+                                        Vivamus sagittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donecittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donec sed odio dui
+                                        consectetur adipiscing elit.”</p>
                                 </div>
-                                <p class="mt-4">“Curabitur blandit tempus porttitor.
-                                    Vivamus sagittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donecittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donec sed odio dui
-                                    consectetur adipiscing elit.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user4.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Jennifer Rich</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Jennifer Rich</h3>
                                         <p>Human Resources</p>
                                     </div>
                                 </div>
@@ -861,52 +898,60 @@
                         <div class="grid gap-8">
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum
+                                        massa
+                                        justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                        auctor. ittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donec
+                                        Cras mattis consectetur purus sit
+                                        amet fermentum. Aenean lacinia
+                                        bibendum nulla sed.”</p>
                                 </div>
-                                <p class="mt-4">“Fusce dapibus, tellus ac cursus tortor mauris condimentum fermentum
-                                    massa
-                                    justo sit amet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                                    auctor. ittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donec
-                                    Cras mattis consectetur purus sit
-                                    amet fermentum. Aenean lacinia
-                                    bibendum nulla sed.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user2.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Cory Zamora</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Cory Zamora</h3>
                                         <p>Marketing Specialist</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Curabitur blandit tempus porttitor.
+                                        Vivamus sagittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donec sed odio dui
+                                        consectetur adipiscing elit.”</p>
                                 </div>
-                                <p class="mt-4">“Curabitur blandit tempus porttitor.
-                                    Vivamus sagittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donec sed odio dui
-                                    consectetur adipiscing elit.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user5.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Maia Dalton</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Maia Dalton</h3>
                                         <p>Sales Intern</p>
                                     </div>
                                 </div>
@@ -917,24 +962,28 @@
                         <div class="grid gap-8">
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Curabitur blandit tempus porttitor.
+                                        Vivamus sagittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donec sed odio dui
+                                        consectetur adipiscing elit.”</p>
                                 </div>
-                                <p class="mt-4">“Curabitur blandit tempus porttitor.
-                                    Vivamus sagittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donec sed odio dui
-                                    consectetur adipiscing elit.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user3.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Nikolas Brooten</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Nikolas Brooten</h3>
                                         <p>Sales Manager</p>
                                     </div>
                                 </div>
@@ -942,24 +991,27 @@
 
 
                             <!-- single testiminial card -->
-                            <div class="flex flex-col bg-white drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
-                                <div class="aspect-auto w-15 overflow-hidden">
-                                    <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                            <div
+                                class="flex flex-col gap-4 bg-white-100 drop-shadow-xl px-4 py-4 md:px-6 md:py-6 rounded-lg">
+                                <div class="flex flex-col">
+                                    <div class="aspect-auto w-15 overflow-hidden">
+                                        <img src="./assets/image/3star-icon.png" class="h-full w-full object-cover">
+                                    </div>
+                                    <p class="mt-4">“Curabitur blandit tempus porttitor.
+                                        Vivamus sagittis lacus vel augue laoreet
+                                        rutrum faucibus dolor auctor. Nullam
+                                        quis risus eget porta ac consectetur
+                                        vestibulum. Donec sed odio dui
+                                        consectetur adipiscing elit.”</p>
                                 </div>
-                                <p class="mt-4">“Curabitur blandit tempus porttitor.
-                                    Vivamus sagittis lacus vel augue laoreet
-                                    rutrum faucibus dolor auctor. Nullam
-                                    quis risus eget porta ac consectetur
-                                    vestibulum. Donec sed odio dui
-                                    consectetur adipiscing elit.”</p>
 
                                 <!-- user info -->
-                                <div class="flex flex-row place-items-center gap-4 mt-4">
+                                <div class="flex flex-row place-items-center gap-4 mt-auto mb-0">
                                     <div class="aspect-square rounded-full h-16 w-16 overflow-hidden">
                                         <img src="./assets/image/user6.jpg" class="h-full w-full object-cover">
                                     </div>
                                     <div class="flex flex-col">
-                                        <h3>Santana Meyers</h3>
+                                        <h3 class="text-lg sm:text-xl text-secondary font-semibold">Santana Meyers</h3>
                                         <p>General Manager</p>
                                     </div>
                                 </div>
@@ -972,15 +1024,16 @@
 
 
         <!-- FAQ Section -->
-        <section class="py-16 bg-offwhite overflow-hidden relative">
+        <section class="py-16 bg-white-100 overflow-hidden relative">
             <!-- conatiner -->
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="container mx-auto  px-4">
                 <!-- Wrapper -->
                 <div class="flex flex-col sm:flex-row gap-4 mb-12 sm:mb-16 md:mb-24 lg:mb-32 xl:mb-40">
                     <!-- Left side -->
                     <div class="w-full sm:w-1/2 flex flex-col place-items-start gap-4">
                         <p class="text-center uppercase text-primary">FAQ</p>
-                        <h2>If you don't see an answer to your question, you can send us an email from our contact form.
+                        <h2 class="text-3xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary font-semibold">If you
+                            don't see an answer to your question, you can send us an email from our contact form.
                         </h2>
                         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
                             sem nec elit. Nullam quis risus eget urna mollis ornare.</p>
@@ -993,10 +1046,11 @@
                         <!-- Accordion Wrapper -->
                         <div class="flex flex-col gap-4" id="accordionWrapper">
                             <!-- Accordion 1 -->
-                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white" id="accordion">
+                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white-100" id="accordion">
 
                                 <div class="cursor-pointer  transition-ease" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -1016,9 +1070,10 @@
                             </div>
 
                             <!-- Accordion 2 -->
-                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white" id="accordion">
+                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white-100" id="accordion">
                                 <div class="cursor-pointer" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -1038,9 +1093,10 @@
                             </div>
 
                             <!-- Accordion 3 -->
-                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white" id="accordion">
+                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white-100" id="accordion">
                                 <div class="cursor-pointer" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -1060,9 +1116,10 @@
                             </div>
 
                             <!-- Accordion 4 -->
-                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white" id="accordion">
+                            <div class="flex flex-col rounded-xl shadow-background p-5 bg-white-100" id="accordion">
                                 <div class="cursor-pointer" id="accordionHead">
-                                    <h3 class="hover:text-primary w-full flex place-items-center gap-5">
+                                    <h3
+                                        class="text-lg sm:text-xl md:text-2xl hover:text-primary w-full flex place-items-center gap-5">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                             stroke-width="1.5" stroke="currentColor" class="size-6 text-primary">
                                             <path stroke-linecap="round" stroke-linejoin="round"

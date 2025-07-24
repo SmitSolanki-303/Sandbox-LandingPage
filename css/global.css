@@ -9,32 +9,35 @@
     --color-secondary: #343F52;
     --color-accent: #60697B;
 
-    /* --color-primary-hover: #5EB9F0/90; */
-
-    --color-blue-light: #E5F4FD;
-    --color-white: #fff;
-    --color-offwhite: #FEFEFE;
-    --color-gray: #AAB0BC;
-
+    --color-black-100: #000000;
+    --color-blue-100: #E5F4FD;
+    --color-white-100: #ffffff;
+    --color-white-200: #fefefe;
+    --color-gray-400: #AAB0BC;
+    
     --shadow-background: 0px 5px 35px 0px rgba(30, 34, 40, 0.07);
-
 
     --background-gradient-bottom: linear-gradient(to bottom, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
     --background-gradient-top: linear-gradient(to top, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
 
-    --animate-infinite-scroll: infinite-scroll 50s linear infinite;
+    --animate-infinite-scroll: infinite-scroll 25s linear infinite;
 
     @keyframes infinite-scroll {
-        from { transform: translateX(0); }
-        to { transform: translateX(-100%); }
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
     }
-    
+
 
 }
 
 body {
     font-family: var(--font-urbanist);
-    background-color: var(--color-bg);
+    background-color: var(--color-white-200);
     scroll-behavior: smooth;
 }
 
@@ -48,19 +51,19 @@ body {
 /* Base - apply style gloablly to all elements like <h1>, <p> */
 @layer base {
     h1 {
-        @apply text-4xl sm:text-5xl md:text-6xl leading-tight md:leading-tight lg:leading-tight xl:leading-tight text-secondary font-semibold;
+        @apply text-secondary font-semibold;
     }
 
     h2 {
-        @apply text-2xl sm:text-3xl md:text-4xl text-secondary font-semibold;
+        @apply  text-secondary font-semibold;
     }
 
     h3 {
-        @apply text-lg sm:text-xl  text-secondary font-semibold;
+        @apply text-secondary font-semibold;
     }
 
     h4 {
-        @apply text-xl text-secondary font-semibold;
+        @apply text-secondary font-semibold;
     }
 
     p {
@@ -73,24 +76,20 @@ body {
 
 /* Utilities - apply style to specific classes like margin, padding, typography, colors, etc */
 @layer utilities {
-    .container {
-        @apply max-w-7xl mx-auto px-4;
-    }
-
     .btn {
-        @apply px-3 py-1 md:px-4 md:py-2 xl:px-6 xl:py-3 text-black text-lg border-2 border-black hover:bg-black hover:text-white transition cursor-pointer text-center w-fit;
+        @apply px-3 py-1 md:px-4 md:py-2 xl:px-6 xl:py-3 text-black-100 text-lg border-2 border-black-100 hover:bg-black-100 hover:text-white-100 transition cursor-pointer text-center w-fit;
     }
 
     .primary-button {
-        @apply bg-primary text-white rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
+        @apply bg-primary text-white-100 rounded-full border-2 border-primary hover:text-primary hover:bg-transparent;
     }
 
 
-    .background-gradient-bottom {
+    .bg-gradient-bottom {
         background-image: var(--background-gradient-bottom);
     }
 
-    .background-gradient-top {
+    .bg-gradient-top {
         background-image: var(--background-gradient-top);
     }
 
@@ -101,5 +100,5 @@ body {
     .swipe {
         @apply w-full overflow-hidden p-6;
     }
-   
+
 }

@@ -3,5 +3,8 @@
     "@tailwindcss/cli": "^4.1.11",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/global.css -o ./build/output.css --watch"
   }
 }
