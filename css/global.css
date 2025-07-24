@@ -20,7 +20,7 @@
     --background-gradient-bottom: linear-gradient(to bottom, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
     --background-gradient-top: linear-gradient(to top, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
 
-    --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+    --animate-infinite-scroll: infinite-scroll 50s linear infinite;
 
     @keyframes infinite-scroll {
         from {
@@ -28,11 +28,20 @@
         }
 
         to {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
         }
     }
 
+    --animate-marquee: marquee 20s linear infinite;
 
+    @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 }
 
 body {

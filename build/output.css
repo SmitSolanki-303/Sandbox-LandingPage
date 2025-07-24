@@ -53,7 +53,8 @@
     --color-white-200: #fefefe;
     --background-gradient-bottom: linear-gradient(to bottom, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
     --background-gradient-top: linear-gradient(to top, #F0F8FE 0%, rgba(0, 0, 0, 0.3) 100%);
-    --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+    --animate-infinite-scroll: infinite-scroll 50s linear infinite;
+    --animate-marquee: marquee 20s linear infinite;
   }
 }
 @layer base {
@@ -307,12 +308,6 @@
   .table {
     display: table;
   }
-  .aspect-\[3\/2\] {
-    aspect-ratio: 3/2;
-  }
-  .aspect-\[134\/27\] {
-    aspect-ratio: 134/27;
-  }
   .aspect-auto {
     aspect-ratio: auto;
   }
@@ -369,9 +364,6 @@
   }
   .w-auto {
     width: auto;
-  }
-  .w-fit {
-    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -430,6 +422,9 @@
   }
   .animate-infinite-scroll {
     animation: var(--animate-infinite-scroll);
+  }
+  .animate-marquee {
+    animation: var(--animate-marquee);
   }
   .cursor-grab {
     cursor: grab;
@@ -555,6 +550,9 @@
   }
   .bg-white-100 {
     background-color: var(--color-white-100);
+  }
+  .bg-white-200 {
+    background-color: var(--color-white-200);
   }
   .object-contain {
     object-fit: contain;
@@ -1268,6 +1266,14 @@ body {
     transform: translateX(0);
   }
   to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
     transform: translateX(-50%);
   }
 }
